@@ -22,13 +22,12 @@ describe("checkbox", () => {
     });
 
     const submitRequest = screen.getByRole("button", {
-      name: /Submit Request/i,
+      name: /confirm order/i,
     });
 
     expect(submitRequest).toBeDisabled();
 
     fireEvent.click(checkbox);
-
     expect(submitRequest).toBeEnabled();
   });
 
@@ -40,15 +39,13 @@ describe("checkbox", () => {
     });
 
     const submitRequest = screen.getByRole("button", {
-      name: /Submit Request/i,
+      name: /confirm order/i,
     });
 
     fireEvent.click(checkbox);
-
     expect(submitRequest).toBeEnabled();
 
     fireEvent.click(checkbox);
-
     expect(submitRequest).toBeDisabled();
   });
 });

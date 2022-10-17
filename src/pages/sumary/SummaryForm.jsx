@@ -1,23 +1,29 @@
 import React, { useState } from "react";
-import { Button, ToggleButton } from "react-bootstrap";
+import { Button, Form, ToggleButton } from "react-bootstrap";
 
 export default function SummaryForm() {
   const [checkBoxStatus, setCheckBoxStatus] = useState(false);
 
+  const checkboxLabel = (
+    <span>
+      I agree to <span style={{ color: "blue" }}>Terms and Conditions</span>
+    </span>
+  );
+
   return (
-    <div>
-      <label htmlFor="checkbox-accept-terms">
-        I agree to Terms and Conditions
-      </label>
-      <ToggleButton
-        id="checkbox-accept-terms"
-        type="checkbox"
-        checked={checkBoxStatus}
-        onChange={(e) => setCheckBoxStatus(e.currentTarget.checked)}
-      />
-      <Button disabled={!checkBoxStatus} variant="primary">
-        Submit Request
+    <Form>
+      <Form.Group controlId="terms-and-conditions">
+        <Form.Check
+          label={checkboxLabel}
+          type="checkbox"
+          checked={checkBoxStatus}
+          onChange={(e) => setCheckBoxStatus(e.currentTarget.checked)}
+        />
+      </Form.Group>
+
+      <Button disabled={!checkBoxStatus} variant="primary" type="submit">
+        Confirm Order
       </Button>
-    </div>
+    </Form>
   );
 }
