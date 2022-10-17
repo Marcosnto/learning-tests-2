@@ -8,7 +8,7 @@ describe("checkbox", () => {
     logRoles(container);
 
     const checkbox = screen.getByRole("checkbox", {
-      name: /Accept terms and conditions/i,
+      name: /i agree to terms and conditions/i,
     });
 
     expect(checkbox).not.toBeChecked();
@@ -18,7 +18,7 @@ describe("checkbox", () => {
     render(<SummaryForm />);
 
     const checkbox = screen.getByRole("checkbox", {
-      name: /Accept terms and conditions/i,
+      name: /i agree to terms and conditions/i,
     });
 
     const submitRequest = screen.getByRole("button", {
@@ -36,7 +36,7 @@ describe("checkbox", () => {
     render(<SummaryForm />);
 
     const checkbox = screen.getByRole("checkbox", {
-      name: /Accept terms and conditions/i,
+      name: /i agree to terms and conditions/i,
     });
 
     const submitRequest = screen.getByRole("button", {

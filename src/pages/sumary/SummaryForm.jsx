@@ -6,7 +6,9 @@ export default function SummaryForm() {
 
   return (
     <div>
-      <label htmlFor="checkbox-accept-terms">Accept terms and conditions</label>
+      <label htmlFor="checkbox-accept-terms">
+        I agree to Terms and Conditions
+      </label>
       <ToggleButton
         id="checkbox-accept-terms"
         type="checkbox"
