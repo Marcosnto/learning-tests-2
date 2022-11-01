@@ -6,7 +6,7 @@ describe("checkbox", () => {
   test("should be unchecked by default", () => {
     const { container } = render(<SummaryForm />);
 
-    logRoles(container);
+    // logRoles(container);
 
     const checkbox = screen.getByRole("checkbox", {
       name: /i agree to terms and conditions/i,
